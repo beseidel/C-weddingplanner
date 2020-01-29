@@ -1,0 +1,89 @@
+
+<h1>Welcome @ViewBag.NewUser.FirstName !</h1>
+<h3>Please Plan Your Wedding</h3>
+<h3>RSVP THE WEDDINGS YOU WANT TO ATTEND</h3>
+
+
+<div class="container">
+
+  <a class='btn btn-secondary' href="/dashboard">DASHBOARD</a>
+<a class='btn btn-secondary' href="/">LOGOUT</a>
+
+
+  <h3><a href="NewWedding">CREATE | <a href="/">LOGOUT</a></h3>
+  <div class="row">
+    <div class="col">
+      <table class="table">
+        <tr>
+          <th scope="col">Name</th>
+          <th scope="col">Date</th> 
+          <th scope="col">Guest</th>
+          <th scope="col">Action</th>
+        </tr>
+  @model List<Wedding>
+          @foreach(var wedding in @Model)
+          {
+            var attending = false;
+            <tr  scope="row">
+              <td>
+                
+                <a href="ShowOne/@wedding.WeddingId">@wedding.WedderOneBride &@wedding.WedderTwoGroom</a>
+              </td>
+              <td>@wedding.Date.ToString("MMM d, yyy")</td>
+              <td>@wedding.Guests.Count</td>
+
+            
+              @foreach(var guester in wedding.Guests)
+              {
+                <span>ViewBag.UserId:  @ViewBag.UserId</span>
+                <span>wedding.CreatorId:  @wedding.CreatorId</span>
+               
+                @if(wedding.CreatorId==ViewBag.UserId)
+                {
+                  <h5>Delete</h5>
+                }
+
+                @if(guester.GuestId == ViewBag.Id)
+                {
+                  attending = true;
+                }
+              }
+              
+
+
+                 <td>                       
+                   @if(@ViewBag.UserId == @wedding.CreatorId)
+                  {
+                    <form action="/Delete/@wedding.WeddingId" method="Delete">
+                    <input type="submit" value="DELETE">
+                    </form>
+                  }
+
+                  @if(attending == true)
+                  {
+                    <form action="/UNRSVP/@wedding.WeddingId" method="POST">
+                      <input type="submit" value="UN-RSVP">
+                    </form>
+                  }
+
+                  else
+                  {
+                    <form action="/RSVP/@wedding.WeddingId" method="POST">
+                      <input type="submit" value="RSVP">
+                    </form>
+                  }
+              
+                </td>
+               </tr>
+            
+         } 
+      </table>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+

@@ -1,0 +1,23 @@
+.contentbox {
+  width: 450px;
+  background-color: whitesmoke;
+  height: 100%;
+  display: block;
+  margin: 20px;
+}
+
+.contentbox2 {
+  width: 450px;
+  background-color: whitesmoke;
+  height: 100%;
+  display: block;
+  margin: 20px;
+}
+
+.input {
+  width: 450px;
+}
+
+btn btn-secondary {
+  background-color: blueviolet;
+}

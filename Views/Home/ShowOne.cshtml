@@ -1,0 +1,32 @@
+
+<p>
+<a class='btn btn-secondary' href="/dashboard">DASHBOARD</a>
+<a class='btn btn-secondary' href="/">LOGOUT</a>
+</p>
+<p>
+<h1>SHOW ONE WEDDING<H1>
+</p>
+<p><h3>
+
+</h3>
+</p>
+
+
+
+@model Wedding
+
+<h2>@Model.WedderOneBride and @Model.WedderTwoGroom</h2>
+<h4>@Model.Date.ToString("MMM d,yyy")</h4>
+
+
+<h5>Invited Guests:</h5>
+
+@foreach(var Guester in @ViewBag.AllGuests.Guests)
+{    
+  <p>@Guester.Guest.FirstName @Guester.Guest.LastName</p>
+}
+<hr />
+
+<a href="/delete/@Model.WeddingId"><button>DELETE WEDDING</button></a>
+<a href="/edit/@Model.WeddingId"><button>EDIT WEDDING</button></a>
+

@@ -1,0 +1,87 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Page Title</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">  
+        
+    </head>
+    <body>
+    
+    @model User
+        <div class="container-fluid">   
+     
+       
+
+     
+    <div class="row">
+        <div class="contentbox">
+    <div class="col">
+       
+    <div class="form-group">
+        
+    <h1>REGISTER</h1>
+    
+    <form  action="/register", method="POST">
+                            
+    <span asp-validation-for="FirstName"></span>
+    <label>First Name:</label>
+    <input class="form-control"  asp-for="FirstName" ></input>
+                            
+    <span asp-validation-for="LastName"></span>
+    <label>Last Name: </label>
+    <input class="form-control"  asp-for="LastName" ></input>
+                            
+    <span asp-validation-for="Email"></span>
+    <label>Email:</label>
+    <input class="form-control" asp-for="Email" ></input>
+                            
+    <span asp-validation-for="Password"></span>
+    <label>Password:</label> 
+    <input class="form-control" asp-for="Password" ></input>
+                            
+    <span asp-validation-for="ConfirmPassword"></span>
+    <label>ConfirmPassword:</label> 
+    <p> <input class="form-control" asp-for="ConfirmPassword" ></input></p>
+        
+    <input type="submit" class="btn btn-secondary" value="REGISTER" ></input>
+     </form>
+    </div>
+   
+        </div>
+        
+        </div>
+        
+       
+     <div class="contentbox">
+    <h1>@ViewBag.show</h1>
+        <div class="col">
+            <h1 style="text-align:left">LOGIN</h1>
+                <form action="/login", method="POST">
+                        
+    <span asp-validation-for="Email"></span>
+                        
+    <p>Email: <input class="form-control" type="text" name="Email" ></p>
+                        
+    <span asp-validation-for="Password"></span>
+    
+    <p>Password: <input class="form-control" type="password" name="Password" ></p>
+                        
+    <p><input type="submit" class="btn btn-secondary" value="LOGIN" ></p>
+                    
+    </form>
+    </div>
+    </div>
+    </div>
+     </div>
+     </div>
+
+    </body>
+
+
+</html>
+
+

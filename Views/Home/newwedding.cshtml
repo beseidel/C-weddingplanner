@@ -1,0 +1,49 @@
+@model Wedding
+
+
+<h1>PLAN YOUR WEDDING</h1>
+
+<a class='btn btn-secondary' href="/dashboard">DASHBOARD</a>
+<a class='btn btn-secondary' href="/">LOGOUT</a>
+
+<h1>Create A Wedding</h1>
+
+<div class="container">
+    
+    <form class='big_form' asp-controller="Home" asp-action="processwedding" method="POST">
+
+        <div class="form-group">
+            <span asp-validation-for="WedderOneBride"></span>
+            <label asp-for="WedderOneBride">BRIDE'S NAME</label>
+            <input type="text" class="form-control" id="exampleFormControlInput1" asp-for='WedderOneBride' value="">
+        </div>
+
+        <div class="form-group">
+            <span asp-validation-for="WedderTwoGroom"></span>
+            <label asp-for="WedderTwoGroom">GROOM'S NAME</label>
+            <input type="text" class="form-control" id="exampleFormControlInput1" asp-for='WedderTwoGroom' value="">
+        </div>
+
+        <div class="form-group">
+            <span asp-validation-for="Date"></span>
+            <label asp-for="Date">SET THE DATE</label>
+            <input type="Date" class="form-control" id="exampleFormControlInput1" asp-for='Date' value="">
+        </div>
+
+        <div class="form-group">
+            <span asp-validation-for="Address"></span>
+            <label asp-for="Address">ADDRESS </label>
+            <input type="text" class="form-control" id="exampleFormControlInput1" asp-for='Address' value="">
+        </div>
+
+        <button type="submit" value='submit' class="btn btn-primary">PLAN A NEW WEDDING</button>
+    </form>
+</div>
+
+
+
+
+
+  
+
+
