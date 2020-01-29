@@ -220,7 +220,7 @@ WriteAttributeValue("", 788, wedding.WeddingId, 788, 18, false);
             WriteLiteral("                    ");
             EndContext();
             BeginContext(1645, 143, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "ccc868b65461463f80ffab7e8f6aa574", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "ccd0c23005f04bc59f11498aa77fef72", async() => {
                 BeginContext(1703, 78, true);
                 WriteLiteral("\n                    <input type=\"submit\" value=\"DELETE\">\n                    ");
                 EndContext();
@@ -269,7 +269,7 @@ AddHtmlAttributeValue("", 1667, wedding.WeddingId, 1667, 18, false);
             WriteLiteral("                    ");
             EndContext();
             BeginContext(1891, 144, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "a45299208b7341108b25f50b1192beac", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "47f7c4559ad4409b828b6a2c988875f1", async() => {
                 BeginContext(1947, 81, true);
                 WriteLiteral("\n                      <input type=\"submit\" value=\"UN-RSVP\">\n                    ");
                 EndContext();
@@ -312,7 +312,7 @@ AddHtmlAttributeValue("", 1913, wedding.WeddingId, 1913, 18, false);
             WriteLiteral("                    ");
             EndContext();
             BeginContext(2120, 139, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "b192d3c5ed104cffb6f84e57d60aa053", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "9fb46d5c168f4b0b9bc1c1363b3e7429", async() => {
                 BeginContext(2174, 78, true);
                 WriteLiteral("\n                      <input type=\"submit\" value=\"RSVP\">\n                    ");
                 EndContext();
